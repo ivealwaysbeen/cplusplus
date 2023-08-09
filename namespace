@@ -1,0 +1,19 @@
+namespace newspace {
+  void boo(){}
+  void foo(){}
+}
+
+use
+
+void goo()
+{
+  newspace::boo();
+
+  using newspace::boo;
+  boo();
+  //foo(); //error.
+
+  using namespace newspace;
+  boo();
+  foo();
+}
